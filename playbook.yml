@@ -1,0 +1,19 @@
+---
+ - name: My playbook
+   hosts: all
+
+   vars:
+      A: "This is my Playbook"
+      B: "This is my Modules"
+   tasks:
+     - name: task1
+       vars:
+           A: "hello world"
+       debug:
+           msg: "{{A}}"
+     - name: task2
+       vars:
+           B: "hello Nagpur"
+       debug:
+           msg: "{{B}}"
+...
